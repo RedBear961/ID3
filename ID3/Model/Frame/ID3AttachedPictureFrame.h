@@ -1,5 +1,5 @@
 //
-//  ID3AttachedImageFrame.h
+//  ID3AttachedPictureFrame.h
 //  ID3
 //
 //  Created by Georgiy Cheremnykh on 26.08.2023.
@@ -21,7 +21,7 @@ typedef NS_ENUM(NSInteger, ID3PictureType)
 	ID3PictureTypeOther = 0
 };
 
-@interface ID3AttachedImageFrame : ID3Frame
+@interface ID3AttachedPictureFrame : ID3Frame
 
 @property (nonatomic) ID3Mime mime;
 @property (nonatomic) ID3PictureType pictureType;

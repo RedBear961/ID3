@@ -24,7 +24,7 @@ typedef NS_OPTIONS(UInt16, ID3FrameHeaderFlag)
 @interface ID3FrameHeader : NSObject
 
 @property (nonatomic, readonly) ID3FrameHeaderID id;
-@property (nonatomic, readonly) NSInteger frameSize;
+@property (nonatomic, readonly) NSInteger size;
 @property (nonatomic, readonly) ID3FrameHeaderFlag flags;
 
 - (instancetype)init NS_UNAVAILABLE;

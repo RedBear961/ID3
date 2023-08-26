@@ -19,8 +19,6 @@
 		C8DE71EF2A95612100486F05 /* ID3FrameHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DE71ED2A95612100486F05 /* ID3FrameHeader.m */; };
 		C8DE71F32A97AAAA00486F05 /* ID3Error.h in Headers */ = {isa = PBXBuildFile; fileRef = C8DE71F12A97AA9400486F05 /* ID3Error.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C8DE71F52A97AAD100486F05 /* ID3Error.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DE71F42A97AAD100486F05 /* ID3Error.m */; };
-		C8DE71F82A97D01F00486F05 /* ID3FrameDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = C8DE71F62A97D01F00486F05 /* ID3FrameDecoder.h */; };
-		C8DE71F92A97D01F00486F05 /* ID3FrameDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DE71F72A97D01F00486F05 /* ID3FrameDecoder.m */; };
 		C8DE71FC2A97D8A300486F05 /* ID3Frame.h in Headers */ = {isa = PBXBuildFile; fileRef = C8DE71FA2A97D8A300486F05 /* ID3Frame.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C8DE71FD2A97D8A300486F05 /* ID3Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DE71FB2A97D8A300486F05 /* ID3Frame.m */; };
 		C8DE71FF2A9A0BC500486F05 /* ID3Private.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DE71FE2A9A0BC500486F05 /* ID3Private.m */; };
@@ -31,8 +29,10 @@
 		C8DE72112A9A567700486F05 /* song001.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C8DE720F2A9A567700486F05 /* song001.mp3 */; };
 		C8E87A522A9A7492008C4C1D /* ID3TextFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = C8E87A502A9A7492008C4C1D /* ID3TextFrame.h */; };
 		C8E87A532A9A7492008C4C1D /* ID3TextFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = C8E87A512A9A7492008C4C1D /* ID3TextFrame.m */; };
-		C8E87A562A9A7596008C4C1D /* ID3AttachedImageFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = C8E87A542A9A7596008C4C1D /* ID3AttachedImageFrame.h */; };
-		C8E87A572A9A7596008C4C1D /* ID3AttachedImageFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = C8E87A552A9A7596008C4C1D /* ID3AttachedImageFrame.m */; };
+		C8E87A562A9A7596008C4C1D /* ID3AttachedPictureFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = C8E87A542A9A7596008C4C1D /* ID3AttachedPictureFrame.h */; };
+		C8E87A572A9A7596008C4C1D /* ID3AttachedPictureFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = C8E87A552A9A7596008C4C1D /* ID3AttachedPictureFrame.m */; };
+		C8E87A602A9A852C008C4C1D /* NSData+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = C8E87A5E2A9A852C008C4C1D /* NSData+Extensions.h */; };
+		C8E87A612A9A852C008C4C1D /* NSData+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C8E87A5F2A9A852C008C4C1D /* NSData+Extensions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,8 +60,6 @@
 		C8DE71ED2A95612100486F05 /* ID3FrameHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ID3FrameHeader.m; sourceTree = "<group>"; };
 		C8DE71F12A97AA9400486F05 /* ID3Error.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ID3Error.h; sourceTree = "<group>"; };
 		C8DE71F42A97AAD100486F05 /* ID3Error.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ID3Error.m; sourceTree = "<group>"; };
-		C8DE71F62A97D01F00486F05 /* ID3FrameDecoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ID3FrameDecoder.h; sourceTree = "<group>"; };
-		C8DE71F72A97D01F00486F05 /* ID3FrameDecoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ID3FrameDecoder.m; sourceTree = "<group>"; };
 		C8DE71FA2A97D8A300486F05 /* ID3Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ID3Frame.h; sourceTree = "<group>"; };
 		C8DE71FB2A97D8A300486F05 /* ID3Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ID3Frame.m; sourceTree = "<group>"; };
 		C8DE71FE2A9A0BC500486F05 /* ID3Private.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ID3Private.m; sourceTree = "<group>"; };
@@ -71,9 +69,12 @@
 		C8DE720F2A9A567700486F05 /* song001.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song001.mp3; sourceTree = "<group>"; };
 		C8E87A502A9A7492008C4C1D /* ID3TextFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ID3TextFrame.h; sourceTree = "<group>"; };
 		C8E87A512A9A7492008C4C1D /* ID3TextFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ID3TextFrame.m; sourceTree = "<group>"; };
-		C8E87A542A9A7596008C4C1D /* ID3AttachedImageFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ID3AttachedImageFrame.h; sourceTree = "<group>"; };
-		C8E87A552A9A7596008C4C1D /* ID3AttachedImageFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ID3AttachedImageFrame.m; sourceTree = "<group>"; };
+		C8E87A542A9A7596008C4C1D /* ID3AttachedPictureFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ID3AttachedPictureFrame.h; sourceTree = "<group>"; };
+		C8E87A552A9A7596008C4C1D /* ID3AttachedPictureFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ID3AttachedPictureFrame.m; sourceTree = "<group>"; };
 		C8E87A582A9A771A008C4C1D /* ID3FramePrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ID3FramePrivate.h; sourceTree = "<group>"; };
+		C8E87A5B2A9A8174008C4C1D /* ID3Frame+Decoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ID3Frame+Decoding.h"; sourceTree = "<group>"; };
+		C8E87A5E2A9A852C008C4C1D /* NSData+Extensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+Extensions.h"; sourceTree = "<group>"; };
+		C8E87A5F2A9A852C008C4C1D /* NSData+Extensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+Extensions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +124,8 @@
 				C8DE71F42A97AAD100486F05 /* ID3Error.m */,
 				C8DE72002A9A0BCE00486F05 /* ID3Private.h */,
 				C8DE71FE2A9A0BC500486F05 /* ID3Private.m */,
+				C8E87A5E2A9A852C008C4C1D /* NSData+Extensions.h */,
+				C8E87A5F2A9A852C008C4C1D /* NSData+Extensions.m */,
 			);
 			path = ID3;
 			sourceTree = "<group>";
@@ -148,8 +151,6 @@
 		C8DE720C2A9A54E100486F05 /* Decode */ = {
 			isa = PBXGroup;
 			children = (
-				C8DE71F62A97D01F00486F05 /* ID3FrameDecoder.h */,
-				C8DE71F72A97D01F00486F05 /* ID3FrameDecoder.m */,
 				C8DE71C82A95479E00486F05 /* ID3Decoder.h */,
 				C8DE71C92A95479E00486F05 /* ID3Decoder.m */,
 			);
@@ -178,9 +179,10 @@
 				C8DE71FB2A97D8A300486F05 /* ID3Frame.m */,
 				C8E87A502A9A7492008C4C1D /* ID3TextFrame.h */,
 				C8E87A512A9A7492008C4C1D /* ID3TextFrame.m */,
-				C8E87A542A9A7596008C4C1D /* ID3AttachedImageFrame.h */,
-				C8E87A552A9A7596008C4C1D /* ID3AttachedImageFrame.m */,
+				C8E87A542A9A7596008C4C1D /* ID3AttachedPictureFrame.h */,
+				C8E87A552A9A7596008C4C1D /* ID3AttachedPictureFrame.m */,
 				C8E87A582A9A771A008C4C1D /* ID3FramePrivate.h */,
+				C8E87A5B2A9A8174008C4C1D /* ID3Frame+Decoding.h */,
 			);
 			path = Frame;
 			sourceTree = "<group>";
@@ -199,11 +201,11 @@
 				C8DE71CE2A9548E600486F05 /* ID3Meta.h in Headers */,
 				C8DE71FC2A97D8A300486F05 /* ID3Frame.h in Headers */,
 				C8DE720B2A9A549700486F05 /* ID3FrameHeaderID.h in Headers */,
+				C8E87A602A9A852C008C4C1D /* NSData+Extensions.h in Headers */,
 				C8DE71EE2A95612100486F05 /* ID3FrameHeader.h in Headers */,
 				C8DE71D22A954BE100486F05 /* ID3Header.h in Headers */,
-				C8E87A562A9A7596008C4C1D /* ID3AttachedImageFrame.h in Headers */,
+				C8E87A562A9A7596008C4C1D /* ID3AttachedPictureFrame.h in Headers */,
 				C8DE71C02A95471400486F05 /* ID3.h in Headers */,
-				C8DE71F82A97D01F00486F05 /* ID3FrameDecoder.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,12 +315,12 @@
 				C8DE71CB2A95479E00486F05 /* ID3Decoder.m in Sources */,
 				C8DE71D32A954BE100486F05 /* ID3Header.m in Sources */,
 				C8DE71FF2A9A0BC500486F05 /* ID3Private.m in Sources */,
-				C8E87A572A9A7596008C4C1D /* ID3AttachedImageFrame.m in Sources */,
+				C8E87A572A9A7596008C4C1D /* ID3AttachedPictureFrame.m in Sources */,
 				C8DE71CF2A9548E600486F05 /* ID3Meta.m in Sources */,
-				C8DE71F92A97D01F00486F05 /* ID3FrameDecoder.m in Sources */,
 				C8DE71FD2A97D8A300486F05 /* ID3Frame.m in Sources */,
 				C8DE71EF2A95612100486F05 /* ID3FrameHeader.m in Sources */,
 				C8DE71F52A97AAD100486F05 /* ID3Error.m in Sources */,
+				C8E87A612A9A852C008C4C1D /* NSData+Extensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

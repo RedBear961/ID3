@@ -8,34 +8,24 @@
 
 #import <ID3/ID3.h>
 
-#import "ID3Meta.h"
 #import "ID3TextFrame.h"
-#import "ID3AttachedImageFrame.h"
+#import "ID3AttachedPictureFrame.h"
 
-@interface ID3Meta (Private)
+NS_ASSUME_NONNULL_BEGIN
 
-@property (strong, nonatomic, readonly) NSDictionary<NSNumber *, ID3Frame *> *frames;
-- (instancetype)initWithHeader:(ID3Header *)header frames:(NSDictionary *)frames;
-
-@end
+FOUNDATION_EXPORT const NSInteger kEncodingMarkerLength;
 
 @interface ID3Frame (Private)
 
-- (instancetype)initWithHeader:(ID3FrameHeader *)header;
++ (nullable instancetype)decodeData:(NSData *)data header:(ID3FrameHeader *)header error:(NSError **)error;
 
 @end
 
 @interface ID3FrameHeader (Private)
 
-- (instancetype)initWithID:(ID3FrameHeaderID)id frameSize:(NSInteger)frameSize flags:(ID3FrameHeaderFlag)flags;
-
-@end
-
-@interface ID3Header (Private)
-
-- (instancetype)initWithVersion:(ID3Version)version
-						  flags:(ID3HeaderFlag)flags
-					  frameSize:(NSInteger)frameSize;
+- (instancetype)initWithID:(ID3FrameHeaderID)id
+				 frameSize:(NSInteger)frameSize
+					 flags:(ID3FrameHeaderFlag)flags;
 
 @end
 
@@ -45,8 +35,14 @@
 
 @end
 
-@interface ID3AttachedImageFrame (Private)
+@interface ID3AttachedPictureFrame (Private)
 
-- (instancetype)initWithHeader:(ID3FrameHeader *)header mime:(ID3Mime)mime pictureType:(ID3PictureType)pictureType frameDescription:(NSString *)frameDescription image:(ID3Image *)image;
+- (instancetype)initWithHeader:(ID3FrameHeader *)header
+						  mime:(ID3Mime)mime
+				   pictureType:(ID3PictureType)pictureType
+			  frameDescription:(NSString *)frameDescription
+						 image:(ID3Image *)image;
 
 @end
+
+NS_ASSUME_NONNULL_END

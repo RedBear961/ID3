@@ -10,7 +10,6 @@
 #import "ID3Header.h"
 #import "ID3FrameHeader.h"
 #import "ID3Private.h"
-#import "ID3FrameDecoder.h"
 #import "ID3FramePrivate.h"
 
 const NSInteger kUnknownFrameHeaderID = -1;
@@ -73,18 +72,19 @@ const NSInteger kUnknownFrameHeaderID = -1;
 																   flags:_frameHeader.flags];
 
 		position += kID3HeaderWidth;
-		NSRange bodyRange = NSMakeRange(position, frameHeader.frameSize);
+		NSRange bodyRange = NSMakeRange(position, frameHeader.size);
 		NSData *frameBody = [data subdataWithRange:bodyRange];
 
-		ID3FrameDecoder *decoder = [ID3FrameDecoder decoderWithFrameHeader:frameHeader data:frameBody];
-		ID3Frame * frame = [decoder decode:error];
+
+//		ID3FrameDecoder *decoder = [ID3FrameDecoder decoderWithFrameHeader:frameHeader data:frameBody];
+		ID3Frame *frame = [ID3Frame decodeData:frameBody header:frameHeader error:error];
 		_CheckIfError(error);
 		if (frame)
 		{
 			frames[@(frameHeader.id)] = frame;
 		}
 
-		position += frameHeader.frameSize;
+		position += frameHeader.size;
 	}
 
 	ID3Meta *meta = [[ID3Meta alloc] initWithHeader:header frames:frames];

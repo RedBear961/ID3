@@ -63,7 +63,7 @@
 	XCTAssertNotNil(album);
 	XCTAssertTrue([album.text isEqualToString:@"song001 Album"]);
 
-	ID3AttachedImageFrame *attachedImage = frames[@(ID3FrameHeaderIDAttachedPicture)];
+	ID3AttachedPictureFrame *attachedImage = frames[@(ID3FrameHeaderIDAttachedPicture)];
 	XCTAssertNotNil(attachedImage);
 	XCTAssertTrue([attachedImage.image.TIFFRepresentation isEqualToData:imageData]);
 }

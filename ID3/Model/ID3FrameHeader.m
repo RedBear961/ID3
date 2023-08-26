@@ -17,7 +17,7 @@ const NSInteger kID3FrameHeaderWidth = 10;
 	if (self = [super init])
 	{
 		_id = id;
-		_frameSize = frameSize;
+		_size = frameSize;
 		_flags = flags;
 	}
 	return self;
