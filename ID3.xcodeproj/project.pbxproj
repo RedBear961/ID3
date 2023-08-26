@@ -1,0 +1,579 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C8DE71C02A95471400486F05 /* ID3.h in Headers */ = {isa = PBXBuildFile; fileRef = C8DE71BF2A95471400486F05 /* ID3.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C8DE71CA2A95479E00486F05 /* ID3Decoder.h in Headers */ = {isa = PBXBuildFile; fileRef = C8DE71C82A95479E00486F05 /* ID3Decoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C8DE71CB2A95479E00486F05 /* ID3Decoder.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DE71C92A95479E00486F05 /* ID3Decoder.m */; };
+		C8DE71CE2A9548E600486F05 /* ID3Meta.h in Headers */ = {isa = PBXBuildFile; fileRef = C8DE71CC2A9548E600486F05 /* ID3Meta.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C8DE71CF2A9548E600486F05 /* ID3Meta.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DE71CD2A9548E600486F05 /* ID3Meta.m */; };
+		C8DE71D22A954BE100486F05 /* ID3Header.h in Headers */ = {isa = PBXBuildFile; fileRef = C8DE71D02A954BE100486F05 /* ID3Header.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C8DE71D32A954BE100486F05 /* ID3Header.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DE71D12A954BE100486F05 /* ID3Header.m */; };
+		C8DE71DC2A9550AD00486F05 /* ID3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8DE71BC2A95471400486F05 /* ID3.framework */; };
+		C8DE71EE2A95612100486F05 /* ID3FrameHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = C8DE71EC2A95612100486F05 /* ID3FrameHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C8DE71EF2A95612100486F05 /* ID3FrameHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DE71ED2A95612100486F05 /* ID3FrameHeader.m */; };
+		C8DE71F32A97AAAA00486F05 /* ID3Error.h in Headers */ = {isa = PBXBuildFile; fileRef = C8DE71F12A97AA9400486F05 /* ID3Error.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C8DE71F52A97AAD100486F05 /* ID3Error.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DE71F42A97AAD100486F05 /* ID3Error.m */; };
+		C8DE71F82A97D01F00486F05 /* ID3FrameDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = C8DE71F62A97D01F00486F05 /* ID3FrameDecoder.h */; };
+		C8DE71F92A97D01F00486F05 /* ID3FrameDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DE71F72A97D01F00486F05 /* ID3FrameDecoder.m */; };
+		C8DE71FC2A97D8A300486F05 /* ID3Frame.h in Headers */ = {isa = PBXBuildFile; fileRef = C8DE71FA2A97D8A300486F05 /* ID3Frame.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C8DE71FD2A97D8A300486F05 /* ID3Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DE71FB2A97D8A300486F05 /* ID3Frame.m */; };
+		C8DE71FF2A9A0BC500486F05 /* ID3Private.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DE71FE2A9A0BC500486F05 /* ID3Private.m */; };
+		C8DE72012A9A26AB00486F05 /* ID3DecodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DE71E22A9550D900486F05 /* ID3DecodeTests.m */; };
+		C8DE72092A9A52CF00486F05 /* ID3Private.h in Headers */ = {isa = PBXBuildFile; fileRef = C8DE72002A9A0BCE00486F05 /* ID3Private.h */; };
+		C8DE720B2A9A549700486F05 /* ID3FrameHeaderID.h in Headers */ = {isa = PBXBuildFile; fileRef = C8DE720A2A9A549400486F05 /* ID3FrameHeaderID.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C8DE72102A9A567700486F05 /* song001_attachedImage.png in Resources */ = {isa = PBXBuildFile; fileRef = C8DE720E2A9A567700486F05 /* song001_attachedImage.png */; };
+		C8DE72112A9A567700486F05 /* song001.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C8DE720F2A9A567700486F05 /* song001.mp3 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C8DE71DD2A9550AD00486F05 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C8DE71B32A95471400486F05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C8DE71BB2A95471400486F05;
+			remoteInfo = ID3;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C8DE71BC2A95471400486F05 /* ID3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ID3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8DE71BF2A95471400486F05 /* ID3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ID3.h; sourceTree = "<group>"; };
+		C8DE71C82A95479E00486F05 /* ID3Decoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ID3Decoder.h; sourceTree = "<group>"; };
+		C8DE71C92A95479E00486F05 /* ID3Decoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ID3Decoder.m; sourceTree = "<group>"; };
+		C8DE71CC2A9548E600486F05 /* ID3Meta.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ID3Meta.h; sourceTree = "<group>"; };
+		C8DE71CD2A9548E600486F05 /* ID3Meta.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ID3Meta.m; sourceTree = "<group>"; };
+		C8DE71D02A954BE100486F05 /* ID3Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ID3Header.h; sourceTree = "<group>"; };
+		C8DE71D12A954BE100486F05 /* ID3Header.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ID3Header.m; sourceTree = "<group>"; };
+		C8DE71D82A9550AD00486F05 /* ID3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ID3Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8DE71E22A9550D900486F05 /* ID3DecodeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ID3DecodeTests.m; sourceTree = "<group>"; };
+		C8DE71EC2A95612100486F05 /* ID3FrameHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ID3FrameHeader.h; sourceTree = "<group>"; };
+		C8DE71ED2A95612100486F05 /* ID3FrameHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ID3FrameHeader.m; sourceTree = "<group>"; };
+		C8DE71F12A97AA9400486F05 /* ID3Error.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ID3Error.h; sourceTree = "<group>"; };
+		C8DE71F42A97AAD100486F05 /* ID3Error.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ID3Error.m; sourceTree = "<group>"; };
+		C8DE71F62A97D01F00486F05 /* ID3FrameDecoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ID3FrameDecoder.h; sourceTree = "<group>"; };
+		C8DE71F72A97D01F00486F05 /* ID3FrameDecoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ID3FrameDecoder.m; sourceTree = "<group>"; };
+		C8DE71FA2A97D8A300486F05 /* ID3Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ID3Frame.h; sourceTree = "<group>"; };
+		C8DE71FB2A97D8A300486F05 /* ID3Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ID3Frame.m; sourceTree = "<group>"; };
+		C8DE71FE2A9A0BC500486F05 /* ID3Private.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ID3Private.m; sourceTree = "<group>"; };
+		C8DE72002A9A0BCE00486F05 /* ID3Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ID3Private.h; sourceTree = "<group>"; };
+		C8DE720A2A9A549400486F05 /* ID3FrameHeaderID.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ID3FrameHeaderID.h; sourceTree = "<group>"; };
+		C8DE720E2A9A567700486F05 /* song001_attachedImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song001_attachedImage.png; sourceTree = "<group>"; };
+		C8DE720F2A9A567700486F05 /* song001.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song001.mp3; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C8DE71B92A95471400486F05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8DE71D52A9550AD00486F05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8DE71DC2A9550AD00486F05 /* ID3.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C8DE71B22A95471400486F05 = {
+			isa = PBXGroup;
+			children = (
+				C8DE71BE2A95471400486F05 /* ID3 */,
+				C8DE71D92A9550AD00486F05 /* ID3Tests */,
+				C8DE71BD2A95471400486F05 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C8DE71BD2A95471400486F05 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C8DE71BC2A95471400486F05 /* ID3.framework */,
+				C8DE71D82A9550AD00486F05 /* ID3Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C8DE71BE2A95471400486F05 /* ID3 */ = {
+			isa = PBXGroup;
+			children = (
+				C8DE71BF2A95471400486F05 /* ID3.h */,
+				C8DE720C2A9A54E100486F05 /* Decode */,
+				C8DE720D2A9A550F00486F05 /* Model */,
+				C8DE71F12A97AA9400486F05 /* ID3Error.h */,
+				C8DE71F42A97AAD100486F05 /* ID3Error.m */,
+				C8DE72002A9A0BCE00486F05 /* ID3Private.h */,
+				C8DE71FE2A9A0BC500486F05 /* ID3Private.m */,
+			);
+			path = ID3;
+			sourceTree = "<group>";
+		};
+		C8DE71D92A9550AD00486F05 /* ID3Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C8DE71E92A9551CE00486F05 /* Resources */,
+				C8DE71E22A9550D900486F05 /* ID3DecodeTests.m */,
+			);
+			path = ID3Tests;
+			sourceTree = "<group>";
+		};
+		C8DE71E92A9551CE00486F05 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C8DE720E2A9A567700486F05 /* song001_attachedImage.png */,
+				C8DE720F2A9A567700486F05 /* song001.mp3 */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C8DE720C2A9A54E100486F05 /* Decode */ = {
+			isa = PBXGroup;
+			children = (
+				C8DE71F62A97D01F00486F05 /* ID3FrameDecoder.h */,
+				C8DE71F72A97D01F00486F05 /* ID3FrameDecoder.m */,
+				C8DE71C82A95479E00486F05 /* ID3Decoder.h */,
+				C8DE71C92A95479E00486F05 /* ID3Decoder.m */,
+			);
+			path = Decode;
+			sourceTree = "<group>";
+		};
+		C8DE720D2A9A550F00486F05 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C8DE71CC2A9548E600486F05 /* ID3Meta.h */,
+				C8DE71CD2A9548E600486F05 /* ID3Meta.m */,
+				C8DE71D02A954BE100486F05 /* ID3Header.h */,
+				C8DE71D12A954BE100486F05 /* ID3Header.m */,
+				C8DE720A2A9A549400486F05 /* ID3FrameHeaderID.h */,
+				C8DE71EC2A95612100486F05 /* ID3FrameHeader.h */,
+				C8DE71ED2A95612100486F05 /* ID3FrameHeader.m */,
+				C8DE71FA2A97D8A300486F05 /* ID3Frame.h */,
+				C8DE71FB2A97D8A300486F05 /* ID3Frame.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C8DE71B72A95471400486F05 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8DE71F32A97AAAA00486F05 /* ID3Error.h in Headers */,
+				C8DE72092A9A52CF00486F05 /* ID3Private.h in Headers */,
+				C8DE71CA2A95479E00486F05 /* ID3Decoder.h in Headers */,
+				C8DE71CE2A9548E600486F05 /* ID3Meta.h in Headers */,
+				C8DE71FC2A97D8A300486F05 /* ID3Frame.h in Headers */,
+				C8DE720B2A9A549700486F05 /* ID3FrameHeaderID.h in Headers */,
+				C8DE71EE2A95612100486F05 /* ID3FrameHeader.h in Headers */,
+				C8DE71D22A954BE100486F05 /* ID3Header.h in Headers */,
+				C8DE71C02A95471400486F05 /* ID3.h in Headers */,
+				C8DE71F82A97D01F00486F05 /* ID3FrameDecoder.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		C8DE71BB2A95471400486F05 /* ID3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8DE71C32A95471400486F05 /* Build configuration list for PBXNativeTarget "ID3" */;
+			buildPhases = (
+				C8DE71B72A95471400486F05 /* Headers */,
+				C8DE71B82A95471400486F05 /* Sources */,
+				C8DE71B92A95471400486F05 /* Frameworks */,
+				C8DE71BA2A95471400486F05 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ID3;
+			productName = ID3;
+			productReference = C8DE71BC2A95471400486F05 /* ID3.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C8DE71D72A9550AD00486F05 /* ID3Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8DE71DF2A9550AD00486F05 /* Build configuration list for PBXNativeTarget "ID3Tests" */;
+			buildPhases = (
+				C8DE71D42A9550AD00486F05 /* Sources */,
+				C8DE71D52A9550AD00486F05 /* Frameworks */,
+				C8DE71D62A9550AD00486F05 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C8DE71DE2A9550AD00486F05 /* PBXTargetDependency */,
+			);
+			name = ID3Tests;
+			productName = ID3Tests;
+			productReference = C8DE71D82A9550AD00486F05 /* ID3Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C8DE71B32A95471400486F05 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				CLASSPREFIX = ID3;
+				LastUpgradeCheck = 1430;
+				ORGANIZATIONNAME = "WebView, Lab";
+				TargetAttributes = {
+					C8DE71BB2A95471400486F05 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					C8DE71D72A9550AD00486F05 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = C8DE71B62A95471400486F05 /* Build configuration list for PBXProject "ID3" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C8DE71B22A95471400486F05;
+			productRefGroup = C8DE71BD2A95471400486F05 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C8DE71BB2A95471400486F05 /* ID3 */,
+				C8DE71D72A9550AD00486F05 /* ID3Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C8DE71BA2A95471400486F05 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8DE71D62A9550AD00486F05 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8DE72102A9A567700486F05 /* song001_attachedImage.png in Resources */,
+				C8DE72112A9A567700486F05 /* song001.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C8DE71B82A95471400486F05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8DE71CB2A95479E00486F05 /* ID3Decoder.m in Sources */,
+				C8DE71D32A954BE100486F05 /* ID3Header.m in Sources */,
+				C8DE71FF2A9A0BC500486F05 /* ID3Private.m in Sources */,
+				C8DE71CF2A9548E600486F05 /* ID3Meta.m in Sources */,
+				C8DE71F92A97D01F00486F05 /* ID3FrameDecoder.m in Sources */,
+				C8DE71FD2A97D8A300486F05 /* ID3Frame.m in Sources */,
+				C8DE71EF2A95612100486F05 /* ID3FrameHeader.m in Sources */,
+				C8DE71F52A97AAD100486F05 /* ID3Error.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8DE71D42A9550AD00486F05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8DE72012A9A26AB00486F05 /* ID3DecodeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C8DE71DE2A9550AD00486F05 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C8DE71BB2A95471400486F05 /* ID3 */;
+			targetProxy = C8DE71DD2A9550AD00486F05 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C8DE71C12A95471400486F05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C8DE71C22A95471400486F05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C8DE71C42A95471400486F05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Z5G62S6SCQ;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.webviewlab.ID3;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C8DE71C52A95471400486F05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Z5G62S6SCQ;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.webviewlab.ID3;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C8DE71E02A9550AD00486F05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z5G62S6SCQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.webviewlab.ID3Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C8DE71E12A9550AD00486F05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z5G62S6SCQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.webviewlab.ID3Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C8DE71B62A95471400486F05 /* Build configuration list for PBXProject "ID3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8DE71C12A95471400486F05 /* Debug */,
+				C8DE71C22A95471400486F05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8DE71C32A95471400486F05 /* Build configuration list for PBXNativeTarget "ID3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8DE71C42A95471400486F05 /* Debug */,
+				C8DE71C52A95471400486F05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8DE71DF2A9550AD00486F05 /* Build configuration list for PBXNativeTarget "ID3Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8DE71E02A9550AD00486F05 /* Debug */,
+				C8DE71E12A9550AD00486F05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C8DE71B32A95471400486F05 /* Project object */;
+}
