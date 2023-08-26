@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NSData (ID3Extensions)
 
 - (uint8_t)byteAtIndex:(NSInteger)index;
+- (NSRange)rangeOfSequence:(const uint8_t *)sequence length:(NSInteger)length;
 
 @end
 

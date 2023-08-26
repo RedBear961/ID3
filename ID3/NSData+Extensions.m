@@ -16,4 +16,12 @@
 	return ((uint8_t *)self.bytes)[index];
 }
 
+- (NSRange)rangeOfSequence:(const uint8_t *)sequence length:(NSInteger)length
+{
+	NSData *search = [NSData dataWithBytes:sequence length:4];
+	return [self rangeOfData:search
+					 options:0
+					   range:NSMakeRange(0, self.length)];
+}
+
 @end
