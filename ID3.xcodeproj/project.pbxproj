@@ -29,6 +29,10 @@
 		C8DE720B2A9A549700486F05 /* ID3FrameHeaderID.h in Headers */ = {isa = PBXBuildFile; fileRef = C8DE720A2A9A549400486F05 /* ID3FrameHeaderID.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C8DE72102A9A567700486F05 /* song001_attachedImage.png in Resources */ = {isa = PBXBuildFile; fileRef = C8DE720E2A9A567700486F05 /* song001_attachedImage.png */; };
 		C8DE72112A9A567700486F05 /* song001.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C8DE720F2A9A567700486F05 /* song001.mp3 */; };
+		C8E87A522A9A7492008C4C1D /* ID3TextFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = C8E87A502A9A7492008C4C1D /* ID3TextFrame.h */; };
+		C8E87A532A9A7492008C4C1D /* ID3TextFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = C8E87A512A9A7492008C4C1D /* ID3TextFrame.m */; };
+		C8E87A562A9A7596008C4C1D /* ID3AttachedImageFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = C8E87A542A9A7596008C4C1D /* ID3AttachedImageFrame.h */; };
+		C8E87A572A9A7596008C4C1D /* ID3AttachedImageFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = C8E87A552A9A7596008C4C1D /* ID3AttachedImageFrame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +69,11 @@
 		C8DE720A2A9A549400486F05 /* ID3FrameHeaderID.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ID3FrameHeaderID.h; sourceTree = "<group>"; };
 		C8DE720E2A9A567700486F05 /* song001_attachedImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song001_attachedImage.png; sourceTree = "<group>"; };
 		C8DE720F2A9A567700486F05 /* song001.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song001.mp3; sourceTree = "<group>"; };
+		C8E87A502A9A7492008C4C1D /* ID3TextFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ID3TextFrame.h; sourceTree = "<group>"; };
+		C8E87A512A9A7492008C4C1D /* ID3TextFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ID3TextFrame.m; sourceTree = "<group>"; };
+		C8E87A542A9A7596008C4C1D /* ID3AttachedImageFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ID3AttachedImageFrame.h; sourceTree = "<group>"; };
+		C8E87A552A9A7596008C4C1D /* ID3AttachedImageFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ID3AttachedImageFrame.m; sourceTree = "<group>"; };
+		C8E87A582A9A771A008C4C1D /* ID3FramePrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ID3FramePrivate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +159,7 @@
 		C8DE720D2A9A550F00486F05 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C8E87A4F2A9A7471008C4C1D /* Frame */,
 				C8DE71CC2A9548E600486F05 /* ID3Meta.h */,
 				C8DE71CD2A9548E600486F05 /* ID3Meta.m */,
 				C8DE71D02A954BE100486F05 /* ID3Header.h */,
@@ -157,10 +167,22 @@
 				C8DE720A2A9A549400486F05 /* ID3FrameHeaderID.h */,
 				C8DE71EC2A95612100486F05 /* ID3FrameHeader.h */,
 				C8DE71ED2A95612100486F05 /* ID3FrameHeader.m */,
-				C8DE71FA2A97D8A300486F05 /* ID3Frame.h */,
-				C8DE71FB2A97D8A300486F05 /* ID3Frame.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C8E87A4F2A9A7471008C4C1D /* Frame */ = {
+			isa = PBXGroup;
+			children = (
+				C8DE71FA2A97D8A300486F05 /* ID3Frame.h */,
+				C8DE71FB2A97D8A300486F05 /* ID3Frame.m */,
+				C8E87A502A9A7492008C4C1D /* ID3TextFrame.h */,
+				C8E87A512A9A7492008C4C1D /* ID3TextFrame.m */,
+				C8E87A542A9A7596008C4C1D /* ID3AttachedImageFrame.h */,
+				C8E87A552A9A7596008C4C1D /* ID3AttachedImageFrame.m */,
+				C8E87A582A9A771A008C4C1D /* ID3FramePrivate.h */,
+			);
+			path = Frame;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,12 +194,14 @@
 			files = (
 				C8DE71F32A97AAAA00486F05 /* ID3Error.h in Headers */,
 				C8DE72092A9A52CF00486F05 /* ID3Private.h in Headers */,
+				C8E87A522A9A7492008C4C1D /* ID3TextFrame.h in Headers */,
 				C8DE71CA2A95479E00486F05 /* ID3Decoder.h in Headers */,
 				C8DE71CE2A9548E600486F05 /* ID3Meta.h in Headers */,
 				C8DE71FC2A97D8A300486F05 /* ID3Frame.h in Headers */,
 				C8DE720B2A9A549700486F05 /* ID3FrameHeaderID.h in Headers */,
 				C8DE71EE2A95612100486F05 /* ID3FrameHeader.h in Headers */,
 				C8DE71D22A954BE100486F05 /* ID3Header.h in Headers */,
+				C8E87A562A9A7596008C4C1D /* ID3AttachedImageFrame.h in Headers */,
 				C8DE71C02A95471400486F05 /* ID3.h in Headers */,
 				C8DE71F82A97D01F00486F05 /* ID3FrameDecoder.h in Headers */,
 			);
@@ -235,6 +259,7 @@
 				TargetAttributes = {
 					C8DE71BB2A95471400486F05 = {
 						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1430;
 					};
 					C8DE71D72A9550AD00486F05 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -284,9 +309,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8E87A532A9A7492008C4C1D /* ID3TextFrame.m in Sources */,
 				C8DE71CB2A95479E00486F05 /* ID3Decoder.m in Sources */,
 				C8DE71D32A954BE100486F05 /* ID3Header.m in Sources */,
 				C8DE71FF2A9A0BC500486F05 /* ID3Private.m in Sources */,
+				C8E87A572A9A7596008C4C1D /* ID3AttachedImageFrame.m in Sources */,
 				C8DE71CF2A9548E600486F05 /* ID3Meta.m in Sources */,
 				C8DE71F92A97D01F00486F05 /* ID3FrameDecoder.m in Sources */,
 				C8DE71FD2A97D8A300486F05 /* ID3Frame.m in Sources */,
@@ -432,6 +459,7 @@
 		C8DE71C42A95471400486F05 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -462,6 +490,7 @@
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -470,6 +499,7 @@
 		C8DE71C52A95471400486F05 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;

@@ -8,7 +8,7 @@
 
 #import "ID3FrameDecoder.h"
 #import "ID3FrameHeader.h"
-#import "ID3Frame.h"
+#import "ID3FramePrivate.h"
 #import "ID3Private.h"
 
 const NSInteger kEncodingMarkerLength = 1;
@@ -30,9 +30,9 @@ const NSInteger kEncodingMarkerLength = 1;
 	return decoder;
 }
 
-- (id<ID3Frame>)decode:(NSError **)error
+- (ID3Frame *)decode:(NSError **)error
 {
-	id<ID3Frame> frame;
+	ID3Frame *frame;
 	switch (self.frameHeader.id)
 	{
 		case ID3FrameHeaderIDTitle:
@@ -47,7 +47,7 @@ const NSInteger kEncodingMarkerLength = 1;
 	return frame;
 }
 
-- (id<ID3Frame>)decodeTextFrame:(NSError **)error
+- (ID3Frame *)decodeTextFrame:(NSError **)error
 {
 	NSStringEncoding encoding = [self encoding:error];
 	_CheckIfError(error);
@@ -57,13 +57,11 @@ const NSInteger kEncodingMarkerLength = 1;
 	NSRange textRange = NSMakeRange(kEncodingMarkerLength, self.frameHeader.frameSize - kEncodingMarkerLength - offset);
 	NSData *textData = [self.data subdataWithRange:textRange];
 	NSString *text = [[NSString alloc] initWithData:textData encoding:encoding];
-	ID3TextFrame *frame = [[ID3TextFrame alloc] init];
-	frame.header = self.frameHeader;
-	frame.text = text;
-	return frame;
+	return [[ID3TextFrame alloc] initWithHeader:self.frameHeader
+										   text:text];
 }
 
-- (id<ID3Frame>)decodeAttachedImageFrame:(NSError **)error
+- (ID3Frame *)decodeAttachedImageFrame:(NSError **)error
 {
 	NSStringEncoding encoding = [self encoding:error];
 	_CheckIfError(error);
@@ -85,13 +83,11 @@ const NSInteger kEncodingMarkerLength = 1;
 	NSString *description = [[NSString alloc] initWithData:[self.data subdataWithRange:descriptionRange]
 												  encoding:encoding];
 
-	ID3AttachedImageFrame *frame = [[ID3AttachedImageFrame alloc] init];
-	frame.header = self.frameHeader;
-	frame.mime = mime;
-	frame.pictureType = pictureType;
-	frame.frameDescription = description;
-	frame.image = image;
-	return frame;
+	return [[ID3AttachedImageFrame alloc] initWithHeader:self.frameHeader
+													mime:mime
+											 pictureType:pictureType
+										frameDescription:description
+												   image:image];
 }
 
 - (NSStringEncoding)encoding:(NSError **)error

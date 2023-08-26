@@ -1,5 +1,5 @@
 //
-//  ID3FrameDecoder.h
+//  ID3Frame.h
 //  ID3
 //
 //  Created by Georgiy Cheremnykh on 24.08.2023.
@@ -11,13 +11,12 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @class ID3FrameHeader;
-@protocol ID3Frame;
 
-@interface ID3FrameDecoder : NSObject
+@interface ID3Frame : NSObject
 
-+ (instancetype)decoderWithFrameHeader:(ID3FrameHeader *)header data:(NSData *)data;
+@property (strong, nonatomic) ID3FrameHeader *header;
 
-- (ID3Frame *)decode:(NSError **)error;
+//- (instancetype)init NS_UNAVAILABLE;
 
 @end
 

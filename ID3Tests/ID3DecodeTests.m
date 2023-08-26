@@ -9,6 +9,7 @@
 #import <XCTest/XCTest.h>
 #import <ID3/ID3.h>
 #import "ID3Private.h"
+#import "ID3FramePrivate.h"
 
 @interface ID3DecodeHeaderTest : XCTestCase
 

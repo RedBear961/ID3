@@ -11,6 +11,7 @@
 #import "ID3FrameHeader.h"
 #import "ID3Private.h"
 #import "ID3FrameDecoder.h"
+#import "ID3FramePrivate.h"
 
 const NSInteger kUnknownFrameHeaderID = -1;
 
@@ -76,7 +77,7 @@ const NSInteger kUnknownFrameHeaderID = -1;
 		NSData *frameBody = [data subdataWithRange:bodyRange];
 
 		ID3FrameDecoder *decoder = [ID3FrameDecoder decoderWithFrameHeader:frameHeader data:frameBody];
-		id<ID3Frame> frame = [decoder decode:error];
+		ID3Frame * frame = [decoder decode:error];
 		_CheckIfError(error);
 		if (frame)
 		{

@@ -8,10 +8,15 @@
 
 #import "ID3Frame.h"
 
-@implementation ID3TextFrame
+@implementation ID3Frame
 
-@end
-
-@implementation ID3AttachedImageFrame
+- (instancetype)initWithHeader:(ID3FrameHeader *)header
+{
+	if (self = [super init])
+	{
+		_header = header;
+	}
+	return self;
+}
 
 @end

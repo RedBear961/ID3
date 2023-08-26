@@ -10,7 +10,7 @@
 
 @interface ID3Meta ()
 
-@property (strong, nonatomic) NSDictionary<NSNumber *, id<ID3Frame>> *frames;
+@property (strong, nonatomic) NSDictionary<NSNumber *, ID3Frame *> *frames;
 
 @end
 
@@ -26,7 +26,7 @@
 	return self;
 }
 
-- (id<ID3Frame>)textFrameForFrameHeaderID:(ID3FrameHeaderID)frameID
+- (ID3Frame *)textFrameForFrameHeaderID:(ID3FrameHeaderID)frameID
 {
 	return nil;
 }

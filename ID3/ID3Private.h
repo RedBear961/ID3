@@ -33,17 +33,6 @@ struct _ID3RawFrameHeader
 	uint16_t flags;
 } __attribute__((packed));
 
-@interface ID3Meta (Private)
 
-@property (strong, nonatomic, readonly) NSDictionary<NSNumber *, id<ID3Frame>> *frames;
-- (instancetype)initWithHeader:(ID3Header *)header frames:(NSDictionary *)frames;
-
-@end
-
-@interface ID3FrameHeader (Private)
-
-- (instancetype)initWithID:(ID3FrameHeaderID)id frameSize:(NSInteger)frameSize flags:(ID3FrameHeaderFlag)flags;
-
-@end
 
 #endif /* __ID3_PRIVATE__ */
