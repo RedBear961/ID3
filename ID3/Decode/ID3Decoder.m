@@ -74,9 +74,6 @@ const NSInteger kUnknownFrameHeaderID = -1;
 		position += kID3HeaderWidth;
 		NSRange bodyRange = NSMakeRange(position, frameHeader.size);
 		NSData *frameBody = [data subdataWithRange:bodyRange];
-
-
-//		ID3FrameDecoder *decoder = [ID3FrameDecoder decoderWithFrameHeader:frameHeader data:frameBody];
 		ID3Frame *frame = [ID3Frame decodeData:frameBody header:frameHeader error:error];
 		_CheckIfError(error);
 		if (frame)

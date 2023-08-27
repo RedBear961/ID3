@@ -26,4 +26,17 @@ typedef NSImage ID3Image;
 #import <ID3/ID3Error.h>
 #import <ID3/ID3Meta.h>
 
+typedef NS_ENUM(NSInteger, ID3Mime)
+{
+	ID3MimeJPEG,
+	ID3MimePNG
+};
+
+ID3Mime ID3MimeUnsupported(void) NS_SWIFT_NAME(getter:ID3Mime.unsupported());
+
+typedef NS_ENUM(NSInteger, ID3PictureType)
+{
+	ID3PictureTypeOther = 0
+};
+
 #endif /* __ID3_ID3__ */

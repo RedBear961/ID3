@@ -11,8 +11,11 @@
 
 #import "ID3Meta.h"
 
-FOUNDATION_EXPORT const NSInteger kID3HeaderWidth;
-FOUNDATION_EXPORT const NSInteger kUnknown;
+extern const NSInteger kID3HeaderWidth;
+extern const NSInteger kUnknown;
+
+extern const uint8_t kJPEGHeader[];
+extern const uint8_t kPNGHeader[];
 
 #define _CheckIfError(error) if (*(error)) { return nil; }
 

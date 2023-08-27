@@ -10,22 +10,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef NS_ENUM(NSInteger, ID3Mime)
-{
-	ID3MimeJPEG,
-	ID3MimePNG
-};
-
-typedef NS_ENUM(NSInteger, ID3PictureType)
-{
-	ID3PictureTypeOther = 0
-};
-
 @interface ID3AttachedPictureFrame : ID3Frame
 
+@property (nonatomic) NSStringEncoding encoding;
 @property (nonatomic) ID3Mime mime;
 @property (nonatomic) ID3PictureType pictureType;
-@property (strong, nonatomic) NSString *frameDescription;
+@property (strong, nonatomic, nullable) NSString *frameDescription;
 @property (strong, nonatomic) ID3Image *image;
 
 - (instancetype)init NS_UNAVAILABLE;

@@ -6,7 +6,7 @@
 //  Copyright © 2023 WebView, Lab. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <ID3/ID3.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (uint8_t)byteAtIndex:(NSInteger)index;
 - (NSRange)rangeOfSequence:(const uint8_t *)sequence length:(NSInteger)length;
+- (ID3Mime)imageFormat;
 
 @end
 

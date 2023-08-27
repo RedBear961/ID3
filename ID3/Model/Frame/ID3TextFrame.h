@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ID3TextFrame : ID3Frame
 
 @property (strong, nonatomic) NSString *text;
+@property (nonatomic) NSStringEncoding encoding;
 
 @end
 

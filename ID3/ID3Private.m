@@ -10,3 +10,11 @@
 
 const NSInteger kUnknown = -1;
 const NSInteger kID3HeaderWidth = 10;
+
+const uint8_t kJPEGHeader[] = {0xFF, 0xD8, 0xFF, 0xE0};
+const uint8_t kPNGHeader[] = {0x89, 0x50, 0x4E, 0x47};
+
+ID3Mime ID3MimeUnsupported(void)
+{
+	return NSIntegerMax;
+}

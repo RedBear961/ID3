@@ -15,11 +15,12 @@
 
 @implementation ID3TextFrame
 
-- (instancetype)initWithHeader:(ID3FrameHeader *)header text:(NSString *)text
+- (instancetype)initWithHeader:(ID3FrameHeader *)header text:(NSString *)text encoding:(NSStringEncoding)encoding
 {
 	if (self = [super initWithHeader:header])
 	{
 		_text = text;
+		_encoding = encoding;
 	}
 	return self;
 }
@@ -45,7 +46,13 @@
 	NSData *textData = [data subdataWithRange:range];
 	NSString *text = [[NSString alloc] initWithData:textData encoding:encoding];
 	return [[ID3TextFrame alloc] initWithHeader:header
-										   text:text];
+										   text:text
+									   encoding:encoding];
+}
+
+- (NSData *)encode:(NSError *)error
+{
+	return nil;
 }
 
 @end

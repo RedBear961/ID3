@@ -33,6 +33,8 @@
 		C8E87A572A9A7596008C4C1D /* ID3AttachedPictureFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = C8E87A552A9A7596008C4C1D /* ID3AttachedPictureFrame.m */; };
 		C8E87A602A9A852C008C4C1D /* NSData+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = C8E87A5E2A9A852C008C4C1D /* NSData+Extensions.h */; };
 		C8E87A612A9A852C008C4C1D /* NSData+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C8E87A5F2A9A852C008C4C1D /* NSData+Extensions.m */; };
+		C8E87A642A9B3EA2008C4C1D /* ID3FrameBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = C8E87A622A9B3EA2008C4C1D /* ID3FrameBuilder.h */; };
+		C8E87A652A9B3EA2008C4C1D /* ID3FrameBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = C8E87A632A9B3EA2008C4C1D /* ID3FrameBuilder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		C8E87A5B2A9A8174008C4C1D /* ID3Frame+Decoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ID3Frame+Decoding.h"; sourceTree = "<group>"; };
 		C8E87A5E2A9A852C008C4C1D /* NSData+Extensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+Extensions.h"; sourceTree = "<group>"; };
 		C8E87A5F2A9A852C008C4C1D /* NSData+Extensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+Extensions.m"; sourceTree = "<group>"; };
+		C8E87A622A9B3EA2008C4C1D /* ID3FrameBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ID3FrameBuilder.h; sourceTree = "<group>"; };
+		C8E87A632A9B3EA2008C4C1D /* ID3FrameBuilder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ID3FrameBuilder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +157,8 @@
 			children = (
 				C8DE71C82A95479E00486F05 /* ID3Decoder.h */,
 				C8DE71C92A95479E00486F05 /* ID3Decoder.m */,
+				C8E87A622A9B3EA2008C4C1D /* ID3FrameBuilder.h */,
+				C8E87A632A9B3EA2008C4C1D /* ID3FrameBuilder.m */,
 			);
 			path = Decode;
 			sourceTree = "<group>";
@@ -200,6 +206,7 @@
 				C8DE71CA2A95479E00486F05 /* ID3Decoder.h in Headers */,
 				C8DE71CE2A9548E600486F05 /* ID3Meta.h in Headers */,
 				C8DE71FC2A97D8A300486F05 /* ID3Frame.h in Headers */,
+				C8E87A642A9B3EA2008C4C1D /* ID3FrameBuilder.h in Headers */,
 				C8DE720B2A9A549700486F05 /* ID3FrameHeaderID.h in Headers */,
 				C8E87A602A9A852C008C4C1D /* NSData+Extensions.h in Headers */,
 				C8DE71EE2A95612100486F05 /* ID3FrameHeader.h in Headers */,
@@ -320,6 +327,7 @@
 				C8DE71FD2A97D8A300486F05 /* ID3Frame.m in Sources */,
 				C8DE71EF2A95612100486F05 /* ID3FrameHeader.m in Sources */,
 				C8DE71F52A97AAD100486F05 /* ID3Error.m in Sources */,
+				C8E87A652A9B3EA2008C4C1D /* ID3FrameBuilder.m in Sources */,
 				C8E87A612A9A852C008C4C1D /* NSData+Extensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

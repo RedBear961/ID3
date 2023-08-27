@@ -19,6 +19,8 @@ FOUNDATION_EXPORT const NSInteger kEncodingMarkerLength;
 
 + (nullable instancetype)decodeData:(NSData *)data header:(ID3FrameHeader *)header error:(NSError **)error;
 
+- (nullable NSData *)encode:(NSError *)error;
+
 @end
 
 @interface ID3FrameHeader (Private)
@@ -31,16 +33,17 @@ FOUNDATION_EXPORT const NSInteger kEncodingMarkerLength;
 
 @interface ID3TextFrame (Private)
 
-- (instancetype)initWithHeader:(ID3FrameHeader *)header text:(NSString *)text;
+- (instancetype)initWithHeader:(ID3FrameHeader *)header text:(NSString *)text encoding:(NSStringEncoding)encoding;
 
 @end
 
 @interface ID3AttachedPictureFrame (Private)
 
 - (instancetype)initWithHeader:(ID3FrameHeader *)header
+					  encoding:(NSStringEncoding)encoding
 						  mime:(ID3Mime)mime
 				   pictureType:(ID3PictureType)pictureType
-			  frameDescription:(NSString *)frameDescription
+			  frameDescription:(nullable NSString *)frameDescription
 						 image:(ID3Image *)image;
 
 @end

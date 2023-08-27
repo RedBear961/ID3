@@ -13,12 +13,10 @@
 #import "ID3Frame+Decoding.h"
 #import "NSData+Extensions.h"
 
-const uint8_t kJPEGHeader[] = {0xFF, 0xD8, 0xFF, 0xE0};
-const uint8_t kPNGHeader[] = {0x89, 0x50, 0x4E, 0x47};
-
 @implementation ID3AttachedPictureFrame
 
 - (instancetype)initWithHeader:(ID3FrameHeader *)header
+					  encoding:(NSStringEncoding)encoding
 						  mime:(ID3Mime)mime
 				   pictureType:(ID3PictureType)pictureType
 			  frameDescription:(NSString *)frameDescription
@@ -26,6 +24,7 @@ const uint8_t kPNGHeader[] = {0x89, 0x50, 0x4E, 0x47};
 {
 	if (self = [super initWithHeader:header])
 	{
+		_encoding = encoding;
 		_mime = mime;
 		_pictureType = pictureType;
 		_frameDescription = frameDescription;
@@ -80,10 +79,16 @@ const uint8_t kPNGHeader[] = {0x89, 0x50, 0x4E, 0x47};
 												  encoding:encoding];
 
 	return [[ID3AttachedPictureFrame alloc] initWithHeader:header
+												  encoding:encoding
 													  mime:mime
 											   pictureType:pictureType
 										  frameDescription:description
 													 image:image];
+}
+
+- (NSData *)encode:(NSError *)error
+{
+	return nil;
 }
 
 + (ID3Mime)mimeFromString:(NSString *)mime error:(NSError **)error
@@ -107,9 +112,11 @@ const uint8_t kPNGHeader[] = {0x89, 0x50, 0x4E, 0x47};
 	switch (mime)
 	{
 		case ID3MimeJPEG:
-			return [data rangeOfSequence:kJPEGHeader length:4];
+			return [data rangeOfSequence:kJPEGHeader
+								  length:4];
 		case ID3MimePNG:
-			return [data rangeOfSequence:kPNGHeader length:4];
+			return [data rangeOfSequence:kPNGHeader
+								  length:4];
 	}
 }
 

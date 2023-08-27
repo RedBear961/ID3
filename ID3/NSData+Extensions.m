@@ -7,6 +7,7 @@
 //
 
 #import "NSData+Extensions.h"
+#import "ID3Private.h"
 
 @implementation NSData (ID3Extensions)
 
@@ -22,6 +23,20 @@
 	return [self rangeOfData:search
 					 options:0
 					   range:NSMakeRange(0, self.length)];
+}
+
+- (ID3Mime)imageFormat
+{
+	uint8_t byte = *(uint8_t *)self.bytes;
+	switch (byte)
+	{
+		case 0xFF:
+			return ID3MimeJPEG;
+		case 0x89:
+			return ID3MimePNG;
+		default:
+			return ID3MimeUnsupported();
+	}
 }
 
 @end
