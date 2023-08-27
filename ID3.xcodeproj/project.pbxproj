@@ -33,7 +33,7 @@
 		C8E87A572A9A7596008C4C1D /* ID3AttachedPictureFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = C8E87A552A9A7596008C4C1D /* ID3AttachedPictureFrame.m */; };
 		C8E87A602A9A852C008C4C1D /* NSData+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = C8E87A5E2A9A852C008C4C1D /* NSData+Extensions.h */; };
 		C8E87A612A9A852C008C4C1D /* NSData+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C8E87A5F2A9A852C008C4C1D /* NSData+Extensions.m */; };
-		C8E87A642A9B3EA2008C4C1D /* ID3FrameBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = C8E87A622A9B3EA2008C4C1D /* ID3FrameBuilder.h */; };
+		C8E87A642A9B3EA2008C4C1D /* ID3FrameBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = C8E87A622A9B3EA2008C4C1D /* ID3FrameBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C8E87A652A9B3EA2008C4C1D /* ID3FrameBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = C8E87A632A9B3EA2008C4C1D /* ID3FrameBuilder.m */; };
 /* End PBXBuildFile section */
 

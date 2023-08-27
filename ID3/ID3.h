@@ -24,6 +24,7 @@ typedef NSImage ID3Image;
 #import <ID3/ID3Header.h>
 #import <ID3/ID3Frame.h>
 #import <ID3/ID3Error.h>
+#import <ID3/ID3FrameBuilder.h>
 #import <ID3/ID3Meta.h>
 
 typedef NS_ENUM(NSInteger, ID3Mime)

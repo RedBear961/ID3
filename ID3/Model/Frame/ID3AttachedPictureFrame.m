@@ -120,4 +120,15 @@
 	}
 }
 
+// MARK: - Override
+
+- (BOOL)isEqual:(ID3AttachedPictureFrame *)other {
+	return self.class == other.class &&
+		  [self.header isEqual:other.header] &&
+		  self.encoding == other.encoding &&
+		  self.mime == other.mime &&
+		  self.pictureType == other.pictureType &&
+		  [self.image.TIFFRepresentation isEqualToData:other.image.TIFFRepresentation];
+}
+
 @end

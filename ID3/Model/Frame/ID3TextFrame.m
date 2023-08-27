@@ -39,9 +39,15 @@
 
 	// Нуль-терминатор не требуется по стандарту, отрезаем для унификации.
 	NSInteger offset = ![data byteAtIndex:header.size - 1];
+	if (offset)
+	{
+		header = [[ID3FrameHeader alloc] initWithID:header.id
+										  frameSize:header.size - offset
+											  flags:header.flags];
+	}
 
 	// Декодируем текст.
-	NSInteger length = header.size - kEncodingMarkerLength - offset;
+	NSInteger length = header.size - kEncodingMarkerLength;// - offset;
 	NSRange range = NSMakeRange(kEncodingMarkerLength, length);
 	NSData *textData = [data subdataWithRange:range];
 	NSString *text = [[NSString alloc] initWithData:textData encoding:encoding];
@@ -53,6 +59,14 @@
 - (NSData *)encode:(NSError *)error
 {
 	return nil;
+}
+
+// MARK: - Override
+
+- (BOOL)isEqual:(ID3TextFrame *)other {
+	return self.class == other.class &&
+		  [self.header isEqual:other.header] &&
+		  [self.text isEqualToString:other.text];
 }
 
 @end

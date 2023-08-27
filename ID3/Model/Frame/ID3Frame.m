@@ -44,6 +44,12 @@ const NSInteger kEncodingMarkerLength = 1;
 	}
 }
 
+- (BOOL)isEqual:(ID3Frame *)other
+{
+	NSAssert(true, @"Not supported!");
+	return NO;
+}
+
 @end
 
 @implementation ID3Frame (Decoding)

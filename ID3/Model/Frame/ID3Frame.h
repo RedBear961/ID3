@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)init NS_UNAVAILABLE;
 
+- (BOOL)isEqual:(ID3Frame *)other;
+
 @end
 
 NS_ASSUME_NONNULL_END

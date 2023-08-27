@@ -23,4 +23,11 @@ const NSInteger kID3FrameHeaderWidth = 10;
 	return self;
 }
 
+- (BOOL)isEqual:(ID3FrameHeader *)other
+{
+	return self.id == other.id &&
+		   self.size == other.size &&
+		   self.flags == other.flags;
+}
+
 @end

@@ -11,8 +11,6 @@
 #import "ID3FramePrivate.h"
 #import "NSData+Extensions.h"
 
-const NSStringEncoding kDefaultEncoding = NSUTF16StringEncoding;
-
 @interface ID3FrameBuilder ()
 
 @property (nonatomic) NSMutableDictionary *frames;
@@ -25,34 +23,29 @@ const NSStringEncoding kDefaultEncoding = NSUTF16StringEncoding;
 {
 	if (self = [super init])
 	{
+		_encoding = NSISOLatin1StringEncoding;
 		_frames = @{}.mutableCopy;
 	}
 	return self;
 }
 
 - (ID3FrameBuilder *)title:(NSString *)text {
-	return [self appendTextFrame:text
-						 frameID:ID3FrameHeaderIDTitle
-						encoding:kDefaultEncoding];
+	return [self appendTextFrame:text frameID:ID3FrameHeaderIDTitle];
 }
 
 - (ID3FrameBuilder *)artist:(NSString *)text {
-	return [self appendTextFrame:text
-						 frameID:ID3FrameHeaderIDArtist
-						encoding:kDefaultEncoding];
+	return [self appendTextFrame:text frameID:ID3FrameHeaderIDArtist];
 }
 
 - (ID3FrameBuilder *)album:(NSString *)text {
-	return [self appendTextFrame:text
-						 frameID:ID3FrameHeaderIDAlbum
-						encoding:kDefaultEncoding];
+	return [self appendTextFrame:text frameID:ID3FrameHeaderIDAlbum];
 }
 
 - (ID3FrameBuilder *)attachedPicture:(ID3Image *)image error:(NSError **)error {
 
 	CGImageRef cgImage = [image CGImageForProposedRect:nil context:nil hints:nil];
 	NSBitmapImageRep *rep = [[NSBitmapImageRep alloc] initWithCGImage:cgImage];
-	NSData *binary = [rep representationUsingType:NSBitmapImageFileTypeJPEG properties:@{}];
+	NSData *binary = [rep representationUsingType:NSBitmapImageFileTypePNG properties:@{}];
 	ID3Mime mime = [binary imageFormat];
 	if (mime == ID3MimeUnsupported())
 	{
@@ -66,7 +59,7 @@ const NSStringEncoding kDefaultEncoding = NSUTF16StringEncoding;
 													  frameSize:frameSize
 														  flags:0];
 	ID3AttachedPictureFrame *frame = [[ID3AttachedPictureFrame alloc] initWithHeader:header
-																			encoding:kDefaultEncoding
+																			encoding:self.encoding
 																				mime:mime
 																		 pictureType:ID3PictureTypeOther
 																	frameDescription:nil
@@ -77,9 +70,9 @@ const NSStringEncoding kDefaultEncoding = NSUTF16StringEncoding;
 
 - (ID3Meta *)build
 {
-	__block NSInteger size = 0;
+	__block NSInteger size = 10;
 	[self.frames.allValues enumerateObjectsUsingBlock:^(ID3Frame *frame, NSUInteger idx, BOOL *stop) {
-		size += frame.header.size;
+		size += frame.header.size + 10;
 	}];
 
 	ID3Header *header = [[ID3Header alloc] initWithVersion:ID3VersionV4
@@ -92,14 +85,14 @@ const NSStringEncoding kDefaultEncoding = NSUTF16StringEncoding;
 
 #pragma mark - Private
 
-- (ID3FrameBuilder *)appendTextFrame:(NSString *)text frameID:(ID3FrameHeaderID)frameID encoding:(NSStringEncoding)encoding
+- (ID3FrameBuilder *)appendTextFrame:(NSString *)text frameID:(ID3FrameHeaderID)frameID
 {
 	ID3FrameHeader *header = [[ID3FrameHeader alloc] initWithID:frameID
 													  frameSize:text.length + 1
 														  flags:0];
 	ID3TextFrame *frame = [[ID3TextFrame alloc] initWithHeader:header
 														  text:text
-													  encoding:encoding];
+													  encoding:self.encoding];
 	self.frames[@(frameID)] = frame;
 	return self;
 }

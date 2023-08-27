@@ -10,7 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class ID3Meta;
+
 @interface ID3FrameBuilder : NSObject
+
+@property (nonatomic) NSStringEncoding encoding;
 
 - (ID3FrameBuilder *)title:(NSString *)text;
 
